@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background: #222;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.clockApp {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  border: 1px solid #fff;
+  /* padding: 40px; */
+  border-radius: 10px;
+  width: 200px;
+}
