@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  background: #222;
+  /* background: #222; */
   font-family: 'Inter', sans-serif;
   font-family: 'Rajdhani', sans-serif;
-  display: grid;
+  /* display: grid;
   place-content: center;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
 
 /* .clockApp {

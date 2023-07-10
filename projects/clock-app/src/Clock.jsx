@@ -4,16 +4,6 @@ import "./App.css";
 
 export function Clock() {
   const [date, setDate] = useState(new Date());
-  const [dark, setDark] = useState(false);
-
-  const changedMode = () => {
-    setDark(!dark);
-  };
-  const text = dark ? "Light Mode" : "Dark Mode";
-  const changedDarkMode = dark
-    ? "clockApp dark button-dark"
-    : "clockApp button-light";
-
   function refreshClock() {
     setDate(new Date());
   }
@@ -23,13 +13,25 @@ export function Clock() {
       clearInterval(timerId);
     };
   }, []);
+
+  const [modeDark, setModeDark] = useState(false);
+  const changedMode = () => {
+    setModeDark(!modeDark);
+  };
+  const text = modeDark ? "Light Mode" : "Dark Mode";
+  const changedDarkMode = modeDark ? "bg-dark modeDark " : "bg-light";
+
   return (
     <>
       <section className={changedDarkMode}>
-        <h1 className="clockStyled">{date.toLocaleTimeString()}</h1>
-        <button className={changedDarkMode} onClick={changedMode}>
-          <span>{text}</span>
-        </button>
+        <div className="clockAppDark clockAppLight">
+          <h1 className="clockTextDark clockTextLight">
+            {date.toLocaleTimeString()}
+          </h1>
+          <button className="buttonDark buttonLight" onClick={changedMode}>
+            <span>{text}</span>
+          </button>
+        </div>
       </section>
     </>
   );

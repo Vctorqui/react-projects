@@ -1,73 +1,87 @@
-.clockApp {
+.bg-dark.modeDark {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: #010101;
+}
+
+.bg-dark.modeDark > .clockAppDark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   border: 10px solid #969292;
+   border-radius: 50px;
+   background-color: #000;
+   width: 500px;
+   padding-bottom: 10px;
+   border-radius: 50px;
+   transition: .3s ease all;
+}
+
+.bg-dark.modeDark > .clockAppDark >  .clockTextDark {
+  color:#fff;
+  font-size: 50px;
+  letter-spacing: 1.5rem;
+}
+
+.bg-dark.modeDark > .clockAppDark > .buttonDark {
+  padding: 0;
+  color: #010101;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid #dacdcd;
+  transition: .3s ease all;
+}
+
+
+.bg-dark.modeDark > .clockAppDark > .buttonDark:hover {
+  color: #010101;
+  background-color: #969292;
+}
+
+
+
+.bg-light {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.bg-light > .clockAppLight {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 10px solid #131313;
-   /* border: 1px solid #fff; */
    padding-bottom: 10px;
    border-radius: 50px;
    background-color: #fff;
    width: 500px;
    transition: .3s ease all;
-   /* box-shadow: 7px 8px 15px -3px rgba(255,255,255,0.1),-7px -8px 15px -3px rgba(255,255,255,0.1); */
- }
+  
+}
 
- .clockApp > .button-light {
-  color: #010101;
-  width: 100px;
-  padding: 0;
-  height: 30px;
-  cursor: pointer;
-  border: 1px solid #131313;
- }
-
- .clockApp > .button-light:hover {
-  color: #fff;
-  background-color: #010101;
- }
-
- .clockStyled {
+.bg-light > .clockAppLight > .clockTextLight {
   color: #010101;
   font-size: 50px;
  letter-spacing: 1.5rem;
 }
 
- .clockApp.dark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-   border: 10px solid #969292;
-   /* padding: 40px; */
-   border-radius: 50px;
-   background-color: #000;
-   /* width: 400px; */
-   /* box-shadow: 7px 8px 15px -3px rgba(255,255,255,0.1),-7px -8px 15px -3px rgba(255,255,255,0.1); */
- }
-
- .clockApp.dark > .clockStyled {
-  color:#fff;
- }
-
-
- .clockApp.dark > .button-dark {
-  padding: 0;
-  color: #fff;
+.bg-light > .clockAppLight  > .buttonLight {
+  color: #010101;
   width: 100px;
+  padding: 0;
   height: 30px;
   cursor: pointer;
-  border: 1px solid #dacdcd;
- }
+  border-radius: 20px;
+  border: 1px solid #131313;
+  transition: .3s ease all;
+}
 
- .clockApp.dark > .button-dark:hover {
-  color: #010101;
-  background-color: #969292;
- }
-
-
-
- /* .clockApp.dark-mode.clockStyled {
+.bg-light > .clockAppLight > .buttonLight:hover {
   color: #fff;
-  font-size: 50px;
- } */
-
+  background-color: #010101;
+}
