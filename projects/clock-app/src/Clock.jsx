@@ -18,7 +18,12 @@ export function Clock() {
   const changedMode = () => {
     setModeDark(!modeDark);
   };
-  const text = modeDark ? "Light Mode" : "Dark Mode";
+  // const text = modeDark ? "Light Mode" : "Dark Mode";
+  const [text, setText] = useState(modeDark ? "Light Mode" : "Dark Mode");
+  useEffect(() => {
+    setText(modeDark ? "Light Mode" : "Dark Mode");
+  }, [modeDark]);
+
   const changedDarkMode = modeDark ? "bg-dark modeDark " : "bg-light";
 
   return (
